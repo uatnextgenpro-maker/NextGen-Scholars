@@ -346,3 +346,111 @@ h1, h2, h3, h4 {
     border-top: 2px solid #e0e0e0;
     margin: 60px 0 40px 0;
 }
+/* --- Styles for Accordion Menu --- */
+.accordion {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.accordion-header {
+    background-color: var(--primary-navy);
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    font-family: var(--font-heading);
+    transition: background-color 0.3s ease;
+    border-bottom: 1px solid #fff3; /* Faint line between headers */
+}
+
+.accordion-header:hover, .accordion-header.active {
+    background-color: var(--primary-green);
+}
+
+.accordion-header::after {
+    content: '\\002B'; /* Plus sign (+) */
+    font-size: 20px;
+    color: white;
+    float: right;
+    margin-left: 5px;
+}
+
+.accordion-header.active::after {
+    content: "\\2212"; /* Minus sign (-) */
+}
+
+.accordion-panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0; /* This is the key to the collapse effect */
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+
+.accordion-nested {
+    margin: 10px 0;
+}
+
+.accordion-nested .accordion-header {
+    background-color: #f1f1f1;
+    color: var(--dark-charcoal);
+    font-size: 16px;
+}
+
+.accordion-nested .accordion-header:hover, .accordion-nested .accordion-header.active {
+    background-color: #ddd;
+}
+
+.accordion-nested .accordion-header::after {
+    color: var(--dark-charcoal);
+}
+
+.placeholder-text {
+    padding: 15px 5px;
+}```
+
+3.  Click **"Commit changes"**.
+
+---
+
+### **Phase 3: Create the `script.js` File**
+
+This is where the magic happens.
+
+1.  Go back to the main page of your repository.
+2.  Tap **"Add file"** -> **"Create new file"**.
+3.  Name the file exactly: **`script.js`**
+4.  In the editor box, paste the JavaScript code below. This code finds all the accordion headers and makes them clickable.
+
+```javascript
+// Find all elements with the class "accordion-header"
+var acc = document.getElementsByClassName("accordion-header");
+var i;
+
+// Loop through all the headers we found
+for (i = 0; i < acc.length; i++) {
+  // Add a "click" event listener to each one
+  acc[i].addEventListener("click", function() {
+    // Toggle the "active" class on the button to change the +/- icon
+    this.classList.toggle("active");
+
+    // Get the panel that is right after the header
+    var panel = this.nextElementSibling;
+
+    // Check if the panel is already open
+    if (panel.style.maxHeight) {
+      // If it is open, close it
+      panel.style.maxHeight = null;
+    } else {
+      // If it is closed, open it by setting its max-height
+      // scrollHeight gets the total height of the content inside
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  });
+}
