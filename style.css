@@ -227,4 +227,10 @@ h1, h2, h3, h4 {
 .contact-email:hover {
     background-color: #e8e8e1;
 }
-
+/* Style for the logo image */
+.navbar .logo img {
+    height: 30px; /* You can adjust this value */
+    width: auto;
+    vertical-align: middle; /* Aligns the image nicely with the text */
+    margin-right: 8px; /* Adds a small space between the logo and text */
+}
