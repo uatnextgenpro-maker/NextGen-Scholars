@@ -45,13 +45,22 @@ h1, h2, h3, h4 {
     background-color: #3a7a6e;
 }
 
+/* This was the old .btn-secondary, we can reuse it later */
 .btn-secondary {
     background-color: var(--primary-navy);
     color: white;
 }
-
 .btn-secondary:hover {
     background-color: #2c5a7e;
+}
+
+/* New style for a standout button */
+.btn-action {
+    background-color: var(--primary-green);
+    color: white;
+}
+.btn-action:hover {
+    background-color: #3a7a6e;
 }
 
 
