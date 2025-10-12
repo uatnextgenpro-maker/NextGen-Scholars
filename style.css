@@ -293,3 +293,56 @@ h1, h2, h3, h4 {
         font-size: 32px;
     }
 }
+/* --- Styles for Structured Course Layout --- */
+.course-category {
+    font-size: 28px;
+    color: var(--primary-navy);
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    margin-top: 20px;
+}
+
+.subject-section {
+    background-color: #ffffff;
+    border: 1px solid #e8e8e1;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.subject-section h3 {
+    margin-top: 0;
+    color: var(--primary-green);
+    font-size: 22px;
+}
+
+.file-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 15px;
+}
+
+.file-list li a {
+    display: block;
+    padding: 12px 15px;
+    text-decoration: none;
+    color: var(--dark-charcoal);
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    margin-bottom: 8px;
+    border: 1px solid #eee;
+    font-weight: bold;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.file-list li a:hover {
+    background-color: #e8e8e1;
+    border-color: #ccc;
+}
+
+.section-divider {
+    border: none;
+    border-top: 2px solid #e0e0e0;
+    margin: 60px 0 40px 0;
+}
