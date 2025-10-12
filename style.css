@@ -204,5 +204,18 @@ h1, h2, h3, h4 {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Creates a 3-column grid */
     gap: 25px;
+}/* --- Styles for Contact Page --- */
+.contact-email {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--primary-green);
+    text-decoration: none;
+    padding: 10px;
+    border-bottom: 2px solid var(--primary-green);
+    transition: background-color 0.3s ease;
+}
+
+.contact-email:hover {
+    background-color: #e8e8e1;
 }
 
