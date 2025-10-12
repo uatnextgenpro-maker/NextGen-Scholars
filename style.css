@@ -234,3 +234,62 @@ h1, h2, h3, h4 {
     vertical-align: middle; /* Aligns the image nicely with the text */
     margin-right: 8px; /* Adds a small space between the logo and text */
 }
+/* ========================================= */
+/* --- Responsive Styles for Mobile View --- */
+/* ========================================= */
+
+/* This rule applies to all screens 768px wide or smaller (most tablets and phones) */
+@media (max-width: 768px) {
+
+    /* --- General Adjustments --- */
+    .container {
+        padding: 0 15px; /* Reduce side padding on mobile */
+    }
+
+    /* --- Header / Navbar for Mobile --- */
+    .navbar .container {
+        flex-direction: column; /* Stack the logo and nav links vertically */
+        padding-top: 10px;
+    }
+
+    .navbar nav ul {
+        flex-direction: column; /* Stack the nav links vertically */
+        margin-top: 15px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar nav li {
+        margin: 10px 0; /* Add vertical spacing between links */
+        margin-left: 0; /* Remove horizontal spacing */
+    }
+
+    /* --- Hero Section for Mobile --- */
+    .hero h1 {
+        font-size: 36px; /* Reduce the main title's font size */
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    /* --- Benefits Section for Mobile --- */
+    .benefits .container {
+        flex-direction: column; /* Stack the benefit items vertically */
+    }
+
+    .benefit-item {
+        margin-bottom: 30px; /* Add space between stacked items */
+    }
+    
+    /* --- Course Grids for Mobile --- */
+    .course-grid,
+    .course-grid-full {
+        grid-template-columns: 1fr; /* Change the 3-column grid to a 1-column grid */
+    }
+
+    /* --- Interior Page Header for Mobile --- */
+    .page-header h1 {
+        font-size: 32px;
+    }
+}
