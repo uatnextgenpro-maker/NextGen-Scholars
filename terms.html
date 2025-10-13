@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- This special tag automatically redirects the user after 0 seconds -->
+    <meta http-equiv="refresh" content="0; url=https://www.termsfeed.com/live/9757bb7d-0980-4039-85e4-58b706af56d8">
+    
+    <title>Redirecting to Terms of Service...</title>
+    <link rel="stylesheet" href="style.css?v=1.1">
+</head>
+<body style="background-color: #f5f5f0; font-family: Arial, sans-serif;">
+    <div style="text-align: center; padding-top: 80px;">
+        <h1>Redirecting you to our Terms of Service...</h1>
+        <p>If you are not redirected automatically, <a href="https://www.termsfeed.com/live/9757bb7d-0980-4039-85e4-58b706af56d8" style="color: #2A5B53;">please click here</a>.</p>
+    </div>
+</body>
+</html>```
+5.  Click **"Commit new file"**.
+
+---
+
+### **Phase 2: Upgrade The Footer Everywhere**
+
+#### **Step 1: Add New CSS for the Upgraded Footer**
+
+1.  Go to your **`style.css`** file and click the pencil icon (✏️) to edit.
+2.  Scroll to the **very bottom** and paste this new CSS code:
+
+```css
+/* --- Styles for Upgraded Footer --- */
+.footer-upgraded {
+    background-color: var(--dark-charcoal);
+    color: #f5f5f0;
+    padding: 40px 0 20px 0;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Default to 1 column on mobile */
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.footer-col h4 {
+    font-family: var(--font-heading);
+    color: white;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.footer-col p {
+    color: #ccc;
+    line-height: 1.6;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul a {
+    text-decoration: none;
+    color: #ccc;
+    transition: color 0.2s ease;
+}
+
+.footer-col ul a:hover {
+    color: white;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #444;
+    padding-top: 20px;
+    font-size: 14px;
+    color: #ccc;
+}
+
+/* Make footer a 3-column grid on larger screens */
+@media (min-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 2fr 1fr 1fr;
+    }
+}```
+3.  Click **"Commit changes"**.
+
+#### **Step 2: Replace the Footer on EVERY Page**
+
+This is the final, most important step. You must go into every single HTML file and replace the old footer with the new one.
+
+1.  **Open `index.html`** to edit.
+2.  **Delete the entire old footer**, from `<footer class="footer">` to `</footer>`.
+3.  **Paste the new footer code** (from the box below) in its place.
+4.  **Commit the change.**
+
+**Here is the New Footer Code to Paste:**
+```html
+<footer class="footer-upgraded">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>NextGen Scholars</h4>
+                <p>Empowering the scholars of tomorrow through accessible, high-quality education and a supportive community.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="community.html">Community</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 NextGen Scholars. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
