@@ -413,45 +413,8 @@ h1, h2, h3, h4 {
 
 .placeholder-text {
     padding: 15px 5px;
-}```
+}
 
-3.  Click **"Commit changes"**.
-
----
-
-### **Phase 3: Create the `script.js` File**
-
-This is where the magic happens.
-
-1.  Go back to the main page of your repository.
-2.  Tap **"Add file"** -> **"Create new file"**.
-3.  Name the file exactly: **`script.js`**
-4.  In the editor box, paste the JavaScript code below. This code finds all the accordion headers and makes them clickable.
-
-```javascript
-// Find all elements with the class "accordion-header"
-var acc = document.getElementsByClassName("accordion-header");
-var i;
-
-// Loop through all the headers we found
-for (i = 0; i < acc.length; i++) {
-  // Add a "click" event listener to each one
-  acc[i].addEventListener("click", function() {
-    // Toggle the "active" class on the button to change the +/- icon
-    this.classList.toggle("active");
-
-    // Get the panel that is right after the header
-    var panel = this.nextElementSibling;
-
-    // Check if the panel is already open
-    if (panel.style.maxHeight) {
-      // If it is open, close it
-      panel.style.maxHeight = null;
-    } else {
-      // If it is closed, open it by setting its max-height
-      // scrollHeight gets the total height of the content inside
-      panel.style.maxHeight = panel.scrollHeight + "px";
-    }
   });
 } 
 /* --- Styles for Community Page --- */
