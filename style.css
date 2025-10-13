@@ -454,3 +454,17 @@ for (i = 0; i < acc.length; i++) {
     }
   });
 } 
+/* --- Styles for Community Page --- */
+.features-list {
+    list-style: none;
+    padding-left: 0;
+    max-width: 500px;
+    margin: 30px auto;
+    text-align: left; /* Aligns the text inside the list to the left */
+}
+
+.features-list li {
+    margin-bottom: 15px;
+    font-size: 16px;
+    line-height: 1.5;
+}
